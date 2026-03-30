@@ -38,7 +38,7 @@ echo "🚀 Starting base model pretraining..."
 python -m scripts.base_train \
     --depth=24 \
     --target-param-data-ratio=8 \
-    --device-batch-size=8 \
+    --device-batch-size=4 \
     --window-pattern=L \
     --run=$WANDB_RUN
 
@@ -59,7 +59,7 @@ else
 fi
 
 python -m scripts.chat_sft \
-    --device-batch-size=8 \
+    --device-batch-size=4 \
     --run=$WANDB_RUN
 
 echo "📊 Evaluating chat model..."

@@ -36,7 +36,7 @@ echo "🚀 Starting base model pretraining..."
 # device-batch-size=8 to fit 32GB VRAM. 
 # window-pattern=L to force standard attention (SDPA) since 5090 doesn't support FA3 yet.
 python -m scripts.base_train \
-    --depth=24 \
+    --depth=16 \
     --target-param-data-ratio=8 \
     --device-batch-size=4 \
     --window-pattern=L \
